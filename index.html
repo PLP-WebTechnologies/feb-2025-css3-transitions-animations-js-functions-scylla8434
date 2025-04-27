@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 & JavaScript Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Theme Switcher Section -->
+        <div class="theme-switcher">
+            <h2>Theme Preferences</h2>
+            <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+            <div class="theme-status">Current Theme: <span id="currentTheme">Light</span></div>
+        </div>
+
+        <!-- Animation Demo Section -->
+        <div class="animation-demo">
+            <h2>Animation Demo</h2>
+            <div class="animated-box" id="animatedBox">
+                Hover me!
+            </div>
+            <button id="animateButton" class="animate-button">Trigger Animation</button>
+        </div>
+
+        <!-- Counter Section with Local Storage -->
+        <div class="counter-section">
+            <h2>Counter (Persisted)</h2>
+            <div class="counter-display">Count: <span id="counter">0</span></div>
+            <div class="counter-controls">
+                <button id="incrementBtn" class="counter-btn">+</button>
+                <button id="decrementBtn" class="counter-btn">-</button>
+                <button id="resetBtn" class="counter-btn">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,168 @@
+/* Global Styles and CSS Variables */
+:root {
+    /* Light theme variables */
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #4CAF50;
+    --secondary-color: #2196F3;
+    --box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    --transition-speed: 0.3s;
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --primary-color: #66bb6a;
+    --secondary-color: #42a5f5;
+    --box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Section Styles */
+.theme-switcher,
+.animation-demo,
+.counter-section {
+    background-color: var(--bg-color);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    transition: all var(--transition-speed);
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+/* Button Styles */
+button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.theme-toggle {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.animate-button {
+    background-color: var(--secondary-color);
+    color: white;
+    margin-top: 1rem;
+}
+
+.counter-btn {
+    background-color: var(--primary-color);
+    color: white;
+    margin: 0 0.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Animated Box Styles */
+.animated-box {
+    width: 200px;
+    height: 200px;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.animated-box:hover {
+    transform: scale(1.1) rotate(5deg);
+    background-color: var(--secondary-color);
+}
+
+/* Animation Keyframes */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Animation Classes */
+.bounce-animation {
+    animation: bounce 1s ease infinite;
+}
+
+.pulse-animation {
+    animation: pulse 1s ease infinite;
+}
+
+/* Counter Display Styles */
+.counter-display {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.counter-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Theme Status Styles */
+.theme-status {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+} 
